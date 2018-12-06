@@ -13,8 +13,8 @@ def trainTest(classifier, X, Y, Xtest, Ytest):
     Ypred = classifier.predictAll(Xtest);          
 
     teAcc = mean((Ytest >= 0) == (Ypred >= 0));     
-    print("Training accuracy {0}, test accuracy {1}".format(trAcc, teAcc))
-
+    print("Training accuracy is {0}".format(trAcc, teAcc))
+    print("Testing accuracy is {1}".format(trAcc, teAcc))
     return (trAcc, teAcc, Ypred)
 
 

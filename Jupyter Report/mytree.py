@@ -5,24 +5,24 @@ from random import randint
 import numpy as np
 
 def runTree(train, Y, test, Yte, dep):
-    clf_gini = DecisionTreeClassifier(criterion = "gini", random_state = 100,
+    model = DecisionTreeClassifier(criterion = "gini", random_state = 100,
                                max_depth=dep, min_samples_leaf=5)
-    clf_gini.fit(train, Y)
+    model.fit(train, Y)
 
-    y_pred = clf_gini.predict(test)
+    yp = model.predict(test)
 
-    print("Accuracy is " + str( accuracy_score(Yte,y_pred)*100))
-    return y_pred
+    print("For Max Tree Depth of "+ str(dep) + " accuracy is " + str( accuracy_score(Yte,yp)*100))
+    return yp
 
 
 def runTree2(train, Y, test, Yte, dep):
-    clf_gini = DecisionTreeClassifier(criterion = "gini", random_state = 100,
+    model = DecisionTreeClassifier(criterion = "gini", random_state = 100,
                                max_depth=dep, min_samples_leaf=5)
-    clf_gini.fit(train, Y)
+    model.fit(train, Y)
 
-    y_pred = clf_gini.predict(test)
+    yp = model.predict(test)
 
-    return y_pred
+    return yp
 
 
 def runForest(train, Y, test, Yte, dep, numTrees):
@@ -50,4 +50,4 @@ def runForest(train, Y, test, Yte, dep, numTrees):
             votes[i] = 1
         else:
             votes[i] = -1
-    print("OVERALL ACCURACY: " + str( accuracy_score(Yte,votes)*100))
+    print("For Max Tree Depth of "+ str(dep) + " and " + str(numTrees) + " tree models, accuracy is " + str( accuracy_score(Yte,votes)*100))

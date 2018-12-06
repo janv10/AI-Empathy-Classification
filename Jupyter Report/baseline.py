@@ -8,7 +8,7 @@ def getBaselineStrat(data):
         if data[i][94] > 0.6:
             empcount += 1
         totalcount += 1
-    print("6. Baseline: " + str(empcount) + " of the " + str(totalcount) + " people in the test set are considered 'Empathetic'")
+    print("Baseline: " + str(empcount) + " of the " + str(totalcount) + " people in the test set are considered 'Very Empathetic'")
     if empcount / totalcount > 0.5:
         return 1
     else:
