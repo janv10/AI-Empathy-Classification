@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 def plotcorrCo(sortedAbsCC):
-    print("Displaying correlation coeefficient figure...")
+    print("5. Displaying Correlation Coefficient Figure...\n")
     fig_size = plt.rcParams["figure.figsize"]
     fig_size[0] = 20
     fig_size[1] = 8

@@ -21,8 +21,9 @@ ind = 0
 strat = base.getBaselineStrat(train)
 base.perfBaselineStrat(test, strat)
 
-print("Now running KNN with K values from 1 through 17..")
+
+print("7. Now running KNN with K values from 1 through 17..")
 for k in range(1, 19, 2):
     knn.knn(train, test, k)
-print("Now running KNN with K value of 809 which should yield similar or identical results to the baseline test accuracy.")
+print("\nNow running KNN with K value of 809 which should yield similar or identical results to the baseline test accuracy.\n")
 knn.knn(train, test, 809)
