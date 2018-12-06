@@ -205,8 +205,8 @@ def returnTrainDevTest():
                 totalArr[row][col] = totalArr[row][col] / maxArr[col]
         print("**Successfully done replacing blank responses.\n")
 
-        Train = totalArr[0:810]
-        Dev = totalArr[811:911]
-        Test = totalArr[911:]
+        Train = totalArr[0:810] # Train = totalArr[0:810]
+        Dev = totalArr[811:911] # Dev = totalArr[811:911]
+        Test = totalArr[911:]   # Test = totalArr[911:]
 
         return Train, Dev, Test
