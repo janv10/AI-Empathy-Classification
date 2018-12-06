@@ -7,7 +7,10 @@ import correlationFinderWithEmpathy as cfe
 import matplotlib.pyplot as plt
 import plotCorr as p
 import baseline as base
-import knn, knn16, runClassifier, linear, datasets
+import knn
+import knn16
+import hingeLogSquared
+
 
 rsp.printWelcome()
 cols = rsp.returnColumnNames()
@@ -57,39 +60,39 @@ allCC, sortedCC, sortedAbsCC = cf.getCorrVals(allVars, cols)
 ##    for j in better15Indexes:
 ##        app.append(test[i][j])
 ##    test2.append(app)
-  
-#for k in range(1, 17, 2):
-#    knn16.knn(train2, test2, k)
-
-#
-
-Y = []
-Yte = []
-
-for i in range(len(train)):
-    if train[i][94] > 0.6:
-        Y.append(1)
-    else:
-        Y.append(-1)
-for i in range(len(test)):
-    if test[i][94] > 0.6:
-        Yte.append(1)
-    else:
-        Yte.append(-1)
-for i in train:
-    del i[94]
-for i in test:
-    del i[94]
-
-Y = np.array(Y)
-Yte = np.array(Yte)
-test = np.array(test)
-train = np.array(train)
-f = linear.LinearClassifier({'lossFunction': linear.SquaredLoss(), 'lambda': 0, 'numIter': 5000, 'stepSize': 0.0001})
-runClassifier.trainTest(f, train, Y, test, Yte)
-f = linear.LinearClassifier({'lossFunction': linear.LogisticLoss(), 'lambda': 0, 'numIter': 5000, 'stepSize': 0.01})
-runClassifier.trainTest(f, train, Y, test, Yte)
-f = linear.LinearClassifier({'lossFunction': linear.HingeLoss(), 'lambda': -0.5, 'numIter': 1000, 'stepSize': 0.05})
-runClassifier.trainTest(f, train, Y, test, Yte)
+##  
+##for k in range(1, 17, 2):
+##    knn16.knn(train2, test2, k)
+##
+##
+##
+##Y = []
+##Yte = []
+##
+##for i in range(len(train)):
+##    if train[i][94] > 0.6:
+##        Y.append(1)
+##    else:
+##        Y.append(-1)
+##for i in range(len(test)):
+##    if test[i][94] > 0.6:
+##        Yte.append(1)
+##    else:
+##        Yte.append(-1)
+##for i in train:
+##    del i[94]
+##for i in test:
+##    del i[94]
+##
+##Y = np.array(Y)
+##Yte = np.array(Yte)
+##test = np.array(test)
+##train = np.array(train)
+##f = hingeLogSquared.LinearClassifier({'lossFunction': hingeLogSquared.SquaredLoss(), 'lambda': 0, 'numIter': 5000, 'stepSize': 0.0001})
+##hingeLogSquared.trainTest(f, train, Y, test, Yte)
+##f = hingeLogSquared.LinearClassifier({'lossFunction': hingeLogSquared.LogisticLoss(), 'lambda': 0, 'numIter': 5000, 'stepSize': 0.01})
+##hingeLogSquared.trainTest(f, train, Y, test, Yte)
+##f = hingeLogSquared.LinearClassifier({'lossFunction': hingeLogSquared.HingeLoss(), 'lambda': -0.5, 'numIter': 1000, 'stepSize': 0.05})
+##hingeLogSquared.trainTest(f, train, Y, test, Yte)
 
 
