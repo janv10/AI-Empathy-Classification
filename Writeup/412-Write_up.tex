@@ -1,10 +1,10 @@
 \documentclass[5px]{report}
 \usepackage{fullpage}
 \usepackage{graphicx}
-\usepackage[margin=0.5in]{geometry}
-
+\usepackage[margin=0.25in]{geometry}
 \begin{document}
-\textbf{Authors}: Patrick O'Connell (oconne16) \& Jahnvi Patel (jpate201)
+\setlength\parindent{0pt}\textbf{Authors}: Patrick O'Connell (oconne16) \& Jahnvi Patel (jpate201) \\
+\textbf{Github Link:} https://github.com/jpate201/Empathy.git
 \begin{enumerate}
 \item \textbf{What is your data and task (including data preprocessing steps)?} \\
 Dataset for this project is acquired from \textit{Young People Survey} from \textit{kaggle.com}. The main task of the project is to predict a persons' empathy as either "very empathetic" or "not very empathetic". The dataset provided in the .csv files is either numerical or categorical. The numerical values were sorted based on 0 being the least and 5 being the most. While, the categorical data was sorted more delicately based on specific keywords (i.e. "never smoked" = 0, or "doctorate degree" = 5). The empty fields were filled with the total average of the column. After loading and cleaning up the data, we normalized the data so all the categories can have the same scale for a fair comparison between them. The people rated their empathy rate higher than 3 are marked as "very empathetic" while the rest are marked as "not very empathetic".
