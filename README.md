@@ -1,4 +1,8 @@
 # Empathy
 
-To Compile: python runall.py
+Patrick O'Connell 
+Jahnvi Patel
+
+To Run: 
+ python runall.py
 
