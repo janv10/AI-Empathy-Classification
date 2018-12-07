@@ -34,6 +34,50 @@ The baseline is computed by using the training dataset marked with "very empathe
 \end{figure}
 
 \item \textbf{Show some examples from the development data that your approach got correct and some it got wrong: if you were to try to fix the ones it got wrong, what would you do?}
-The keys to understanding the faults in the predictions development data for the approaches that we used lies mostly with the tuning of hyperparameters.  This is to say that the development data exposed whether or not we were likely to be overfitting and underfitting our data for the various models that we used.  When it came to the decision tree classifier, we found that using depths greater that 6 would greatly overfit the training data and cause adverse effects when it came to the development accuracy.   The decision tree classifier actually saw accuracies below that of the baseline classifier when the depth was increase to 8 or greater.  However, larger maximum depths were permissible when using the Random Forest approach.  Here, overfitting seemed to occur past depths of around 50 but this was highly subject to the random fluctuations in the model itself.
+The keys to understanding the faults in the predictions development data for the approaches that we used lies mostly with the tuning of hyper-parameters.  This is to say that the development data exposed whether or not we were likely to be overfitting and underfitting our data for the various models that we used.  When it came to the decision tree classifier, we found that using depths greater that 6 would greatly overfit the training data and cause adverse effects when it came to the development accuracy.   The decision tree classifier actually saw accuracies below that of the baseline classifier when the depth was increase to 8 or greater.  However, larger maximum depths were permissible when using the Random Forest approach.  Here, overfitting seemed to occur past depths of around 50 but this was highly subject to the random fluctuations in the model itself.
 \end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion} 
+
+
+Niklas Donges (2018, Feb 22).
+\textit{The Random Forest Algorithm}. 
+Retrieved from https://towardsdatascience.com/
+ 
+\bibitem{Norm} 
+Stephanie.
+\textit{Normalized Data / Normalization}. 
+Retrieved from https://www.statisticshowto.datasciencecentral.com
+
+
+\bibitem{knn} 
+Shanon Williamson.
+\textit{K Nearest Neighborhood (KNNs)}. 
+Retrieved from https://slideplayer.com/slide/7364467/
+
+\bibitem{knn} 
+Scikit-learn Developers
+\textit{Documentation of scikit-learn 0.20.1}. 
+Retrieved from https://scikit-learn.org/
+
+\bibitem{book} 
+Hal Daumé III.
+\textit{A Course in Machine Learning}. 
+Retrieved from http://ciml.info/
+
+\bibitem{supLearn} 
+Piyush Rai.
+\textit{Supervised Learning:
+K-Nearest Neighbors and Decision Trees}. 
+Retrieved from https://www.cs.utah.edu/
+
+\bibitem{hw3} 
+412: Homework 3 Code.
+Retrieved from https://www.gradescope.com
+
+
+
+
+\end{thebibliography}
 \end{document} 
