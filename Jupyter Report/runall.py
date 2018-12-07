@@ -49,6 +49,7 @@ train1 = np.array(train1)
 
 
 print("                          VALID INTEGER INPUT COMMANDS")
+print("        0 -> Plots and shows the correlation coefficients for all variables")
 print("        1 -> Plots and shows absolute values of the correlation coefficients for all variables")
 print("        2 -> Shows the results of baseline testing using most common occurance prediction")
 print("        3 -> Run KNN using all variables with K values from 1 through 17")
@@ -68,8 +69,10 @@ while(b):
 
     var = input("$>>")
 
-    
-    if var == "1":
+    if var == "0":
+        print("Plotting the absolute values of the correlation coefficients for all variables...")
+        p.plotcorrCo(sortedCC)
+    elif var == "1":
         print("Plotting the absolute values of the correlation coefficients for all variables...")
         p.plotcorrCo(sortedAbsCC)
     elif var == "2":
