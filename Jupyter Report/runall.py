@@ -54,7 +54,7 @@ print("        1 -> Plots and shows absolute values of the correlation coefficie
 print("        2 -> Shows the results of baseline testing using most common occurance prediction")
 print("        3 -> Run KNN using all variables with K values from 1 through 17")
 print("        4 -> Run KNN using all variables with K value equivalent to training group size")
-print("        5 -> Run KNN using top 16 most correlated vaiables with K values from 1 through 15")
+print("        5 -> Run KNN using top 16 most correlated variables with K values from 1 through 15")
 print("        6 -> Perform Gradient Descent using the Squared Loss function")
 print("        7 -> Perform Gradient Descent using the Logistic Loss function")
 print("        8 -> Perform Gradient Descent using the Hinge Loss function")
@@ -78,7 +78,7 @@ while(b):
     elif var == "2":
         strat = base.getBaselineStrat(train)
         base.perfBaselineStrat(test, strat)
-    elif var == "3":     
+    elif var == "3":
         for k in range(1, 19, 2):
             knn.knn(train, test, k)
     elif var == "4":
@@ -101,13 +101,13 @@ while(b):
             for j in better15Indexes:
                 app.append(train[i][j])
             train2.append(app)
-            
+
         for i in range(len(test)):
             app = []
             for j in better15Indexes:
                 app.append(test[i][j])
             test2.append(app)
-          
+
         for k in range(1, 17, 2):
             knn16.knn(train2, test2, k)
 
@@ -125,7 +125,7 @@ while(b):
         print("Running gradient descent using the Hinge Loss function")
         f = hingeLogSquared.LinearClassifier({'lossFunction': hingeLogSquared.HingeLoss(), 'lambda': -0.5, 'numIter': 1000, 'stepSize': 0.05})
         hingeLogSquared.trainTest(f, train1, Y, test1, Yte)
-    
+
     elif var == "9":
         for i in range(1,11):
             mytree.runTree(train1, Y, test1, Yte, i)
@@ -133,7 +133,7 @@ while(b):
         print("Creating Random Forest...")
         mytree.runForest(train1, Y, test1, Yte, 40, 100)
     elif var == "11":
-        
+
         var1 = input("Enter Decision Tree Max Depth: ")
         var2 = input("Enter Number of Bagged Samples to create: ")
         int1 = int(var1)
@@ -146,14 +146,14 @@ while(b):
     else:
         print("Invalid Command: Try Again...")
 
-    
+
     print(" ")
 
-    
-print("Exiting...")
-    
 
-    
+print("Exiting...")
+
+
+
 
 
 
